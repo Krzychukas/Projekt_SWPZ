@@ -35,7 +35,7 @@ double od_st(int n, int tab[])
 	{
 		tmp = tmp + (tab[i] - av)*(tab[i] - av) ;
 	}
-	tmp = tmp / 2;
+	tmp = tmp / n;
 	tmp = sqrt(tmp);
 	return tmp;
 }

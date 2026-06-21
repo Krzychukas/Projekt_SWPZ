@@ -13,7 +13,20 @@ float SS(int n, int a[])
 	return tmp;
 }
 
+float SSxy(int n, int x[], int y[])
+{
+	int tmp = 0;
+	int avx = avg(n, x);
+	int avy = avg(n, y);
+	for (int i = 0; i < n;i++)
+	{
+		tmp = tmp + (x[i] - avx) * (y[i] - avy);
+	}
+	return tmp;
+}
+
 float Pearson(int n, int x[], int y[])
 {
-	return 0.0f;
+	float pear = SSxy(n, x, y) / (sqrt(SS(n, x) * SS(n, y))) ;
+	return pear;
 }
