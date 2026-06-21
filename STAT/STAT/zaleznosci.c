@@ -16,7 +16,7 @@ float SS(int n, int a[])
 
 float SSxy(int n, int x[], int y[])
 {
-	int tmp = 0;
+	float tmp = 0;
 	float avx = avg(n, x);
 	float avy = avg(n, y);
 	for (int i = 0; i < n;i++)
@@ -37,7 +37,10 @@ float reglin(int n, int x[], int y[])
 	float a = SSxy(n, x, y) / SS(n, x);
 	float avx = avg(n, x);
 	float avy = avg(n, y);
-	float b = avy - a * avy;
-	printf("regresja liniowa:\n y = %lf*x + %lf", a, b);
+	float b = avy - a * avx;
+	if (b>0)
+	printf("regresja liniowa:\n y = %lf*x+%lf", a, b);
+	else
+	printf("regresja liniowa:\n y = %lf*x%lf", a, b);
 		return a;
 }
