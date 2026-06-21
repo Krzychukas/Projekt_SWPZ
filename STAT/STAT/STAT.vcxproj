@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="indeksy.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="zaleznosci.c" />
     <ClCompile Include="Plik.c" />
   </ItemGroup>
   <ItemGroup>
@@ -148,6 +149,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="indeksy.h" />
+    <ClInclude Include="zaleznosci.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
