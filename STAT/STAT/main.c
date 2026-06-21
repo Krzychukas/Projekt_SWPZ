@@ -11,7 +11,7 @@ int main()
 	int n = sizeof(x) / sizeof(x[0]);
 	plik(x, y);
 	int m = 0;
-	printf("co chcesz obliczyc?\n srednia arytmetyczn (1) \n mediana (2) \n odchylenie standardowe (3)\n regresja liniowa (4)\n   ");
+	printf("co chcesz obliczyc?\n srednia arytmetyczna (1) \n mediana (2) \n odchylenie standardowe (3)\n regresja liniowa (4)\n   ");
 	scanf_s("%d", &m);
 	switch (m) {
 	case 1:
@@ -25,7 +25,7 @@ int main()
 		break;
 	case 4:
 		reglin(n, x, y);
-		printf("\nzbieznosc liniowa: %.lf", Pearson(n, x, y));
+		printf("\nkorelacja liniowa: %.lf", Pearson(n, x, y));
 		break;
 	}
 	return 0;
