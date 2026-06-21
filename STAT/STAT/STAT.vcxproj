@@ -142,6 +142,10 @@
     <ClCompile Include="indeksy.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="zaleznosci.c" />
+    <ClCompile Include="Plik.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="plik.h" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="indeksy.h" />
