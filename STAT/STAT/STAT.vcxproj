@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{f402e8e5-2707-48d2-85ab-57b2bfdc60f5}</ProjectGuid>
+    <ProjectGuid>{16A7B737-15F9-813F-E3B9-3F14C14D7028}</ProjectGuid>
     <RootNamespace>STAT</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -140,6 +140,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.c" />
+    <ClCompile Include="Plik.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="plik.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
