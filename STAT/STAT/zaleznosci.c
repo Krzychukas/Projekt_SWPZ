@@ -1,11 +1,12 @@
 #include "zaleznosci.h"
 #include "indeksy.h"
 #include "math.h"
+#include "stdio.h"
 
 float SS(int n, int a[])
 {
-	int tmp = 0;
-	int av = avg(n, a);
+	float tmp = 0;
+	float av = avg(n, a);
 	for (int i = 0; i < n;i++)
 	{
 		tmp = tmp + (a[i] - av) * (a[i] - av);
@@ -16,8 +17,8 @@ float SS(int n, int a[])
 float SSxy(int n, int x[], int y[])
 {
 	int tmp = 0;
-	int avx = avg(n, x);
-	int avy = avg(n, y);
+	float avx = avg(n, x);
+	float avy = avg(n, y);
 	for (int i = 0; i < n;i++)
 	{
 		tmp = tmp + (x[i] - avx) * (y[i] - avy);
@@ -29,4 +30,14 @@ float Pearson(int n, int x[], int y[])
 {
 	float pear = SSxy(n, x, y) / (sqrt(SS(n, x) * SS(n, y))) ;
 	return pear;
+}
+
+float reglin(int n, int x[], int y[])
+{
+	float a = SSxy(n, x, y) / SS(n, x);
+	float avx = avg(n, x);
+	float avy = avg(n, y);
+	float b = avy - a * avy;
+	printf("regresja liniowa:\n y = %lf*x + %lf", a, b);
+		return a;
 }
